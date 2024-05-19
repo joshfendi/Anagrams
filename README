@@ -1,0 +1,98 @@
+Name: Joshua Fendi
+USC NetID: 5712969966
+CS 455 PA4
+Spring 2024
+
+----------------------------------------------
+CERTIFY IT'S YOUR WORK
+
+"I certify that the work submitted for this assignment does not
+violate USC's student conduct code.  In particular, the work is my
+own, not a collaboration, and does not involve code created by other
+people or AI software, except for the the resources explicitly mentioned
+in the CS 455 Course Syllabus.  And I did not share my solution or part
+of it with other students in the course."
+
+Initial below to "sign" the above statement:
+JF
+
+----------------------------------------------
+ACKNOWLEDGE ANY OUTSIDE SOURCES
+
+List here any code you submitted for this assignment that was written
+with significant help of a course staff member, or code used from the
+textbook.  Be specific about what methods or algorithms are involved,
+and what sections of the textbook are involved (if applicable): [you do
+not need to list any of the code that we wrote for the assignment,
+i.e., the contents of the starter files for the assignment]
+
+
+
+----------------------------------------------
+KNOWN BUGS or LIMITATIONS:
+
+
+
+----------------------------------------------
+DESCRIPTION OF YOUR CLASS DESIGN AND ALGORITHMS AND DATA STRUCTURES USED:
+
+
+WORD FINDER
+Class Design: 
+    - main() provides user interface and utilizes the two helper functions findWords() and printPossibleWords()
+Algorithms and Data structures:
+    - findWords()
+        - ArrayList<String> foundWords: ArrayList is flexible and easy to add an undetermined amount of anagrams
+        - TreeMap<String, Integer> wordsAndPoints: keeps Entrys in alphabetical order when printing
+        - Set<Entry<String, Integer>> entrySet: contains unique set of keys
+        - ArrayList<Entry<String, Integer>> list: convert back to list to be able to use "Collections.sort()"
+        - Collections.sort(): specifies that each Entry should be sorted by their values
+    - printPossibleWords()
+        - Entry<String, Integer> entry: each entry contains a word (string) and score (integer), makes easy to print information
+    
+
+ANAGRAM DICTIONARY
+Class Design:
+    - anagramHashMap: contains key: canonical form, value: Array List of actual english words
+    - process words in a dictionary and adds their canonical form to anagramHashMap if not already there, and the actual word
+    - defensive copies of ArrayLists prevent unwanted changes in anagramHashMap
+Algorithms and Data structures: 
+    - anagramHashMap = new HashMap<String, ArrayList<String>>()
+        - HashMap: allows for O(1) time complexity for insert and lookup
+        - ArrayList<String>: ease of insertion using .add
+    - Arrays.sort(charArray): Arrays have a built in sort function to sort characters alphabetically
+
+RACK
+Class Design:
+    - private ArrayList<String> generatedSubsets: contains generated subsets of input str
+    - Rack(): filters out non alphabet characters and counts character occurances
+    - getSubsets(): return a defensive copy
+Algorithms and Data structures:
+    - ArrayList<String> generatedSubsets: ease of adding elements
+    - char[] charArray: String split up into chars
+    - ArrayList<Character> charArrayList: only alphabetical Characters
+    - TreeMap<Character, Integer> countChars: count the number of occurances a character is in a word
+    - Set<Character> setOfChars: contains a unique set of characters
+    - Collection<Integer> counts: contains a collection of corresponding counts for each character
+
+
+SCORE TABLE
+Class Design:
+    - Multiple ArrayLists, each with Characters that correspond to a certain score
+    - Each ArrayList represents a different score
+    - getScore(): Calculates the score for a word
+Algorithms and Data structures:
+    - ArrayList<Character>: ArrayLists only consisted of upperCase letters for simplicity. Easy to change
+        which letter corresponds with which point
+
+
+
+----------------------------------------------
+ANY OTHER NOTES FOR THE GRADER:
+
+
+
+
+
+
+
