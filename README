@@ -86,11 +86,9 @@ Algorithms and Data structures:
         which letter corresponds with which point
 
 
-
-----------------------------------------------
-ANY OTHER NOTES FOR THE GRADER:
-
-
+TO RUN PROGRAM:
+1) Run WordFinder.java
+2) Input letters that you would like to be generate words from
 
 
 
